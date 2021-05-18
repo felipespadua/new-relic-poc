@@ -23,8 +23,11 @@ const serverlessConfiguration: AWS = {
         sudo: false,
       },
     },
+    newRelic: {
+      accountId: "2784665"
+    }
   },
-  plugins: ["serverless-webpack"],
+  plugins: ["serverless-webpack", "serverless-newrelic-lambda-layers"],
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
@@ -34,8 +37,8 @@ const serverlessConfiguration: AWS = {
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
-      NEW_RELIC_LICENSE_KEY: "9a1ad38515180f02ff5e37abf3b3bfabd4d0NRAL",
-      NEW_RELIC_APP_NAME: "TESTE",
+      NEW_RELIC_ACCOUNT_ID: "2784665",
+      NEW_RELIC_APP_NAME: "new-relic-poc",
       NEW_RELIC_DISTRIBUTED_TRACING_ENABLED: "true",
       NEW_RELIC_NO_CONFIG_FILE: "true",
     },
