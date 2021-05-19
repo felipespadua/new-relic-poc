@@ -5,4 +5,4 @@
 3. Instalar o Secrets Manager e o Log Ingestion usando o comando: `newrelic-lambda integrations install --aws-profile {PROFILE} --aws-region {REGION} --nr-account-id 2784665 --nr-api-key NRAK-LIIH7QGE010KY8Q89FSKYRIABCD`
 4. Deploy do Lambda: `npm run deploy:dev -- --aws-profile {PROFILE}`
 5. [Opcional] Instalar o Lambda Layer usando o comando: `newrelic-lambda layers install --aws-profile {PROFILE} --nr-account-id 2784665 --function new-relic-poc-dev-hello --upgrade`. O layer será linkado com a account do new relic.
-6. Não esquece de habilitar o envio de logs pela lambda do new relic (newrelic-log-ingestion). Vá em variáveis de ambiente e mude LOGGING_ENABLED para true.
+6. Não esquecer de habilitar o envio de logs pela lambda do new relic (newrelic-log-ingestion). Vá em variáveis de ambiente e mude LOGGING_ENABLED para true.
